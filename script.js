@@ -1,29 +1,27 @@
-// script.js
-
-// List of your spec filenames (without the .json extension)
-const specs = [
-  "single_view",
+const chartIds = [
+  "single_view1",
   "single_view2",
   "single_view3",
-  "multiple_view",
+  "single_view4",
+  "multiple_view1",
   "multiple_view2",
   "multiple_view3",
   "multiple_view4",
   "multiple_view5",
+  "multiple_view6",
 ];
 
-// Iterate and embed each chart
-specs.forEach((id) => {
-  const url = `data/${id}.json`; // e.g. data/single_view.json
-  const selector = `#${id}`; // e.g. #single_view
+chartIds.forEach((id) => {
+  const url = `new_data/${id}.json`; // or new_data/, depending on your folder
+  const selector = `#${id}`;
 
-  vegaEmbed(selector, url, {
-    actions: false, // disable the Vega-Lite action menu
-    renderer: "canvas", // or "svg"
-  })
-    .then(() => console.log(`Loaded ${id}`))
+  fetch(url)
+    .then((res) => res.json())
+    .then((spec) => {
+      return vegaEmbed(selector, spec, { actions: false });
+    })
     .catch((err) => {
-      console.error(`Failed to load ${url}:`, err);
-      document.querySelector(selector).innerText = "Error loading chart";
+      console.error(`Error loading ${id}:`, err);
+      document.querySelector(selector).innerText = "Chart failed to load.";
     });
 });

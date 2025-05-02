@@ -2,59 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Integrated Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Vega & Vega-Lite -->
+  <!-- Vega Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
-  <h1>My Integrated Visualizations</h1>
+  <header>
+    <h1>My Dashboard</h1>
+    <p class="subtitle">An integrated view of towing data</p>
+  </header>
 
-  <!-- one section per chart -->
-  <section class="chart-block">
-    <h2 class="chart-title">Single View 1</h2>
-    <div id="single_view" class="viz"></div>
-  </section>
+  <main class="chart-grid">
+    <!-- Single Views -->
+    <section class="chart-block">
+      <h2 class="chart-title">Single View 1</h2>
+      <div id="single_view1" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Single View 2</h2>
+      <div id="single_view2" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Single View 3</h2>
+      <div id="single_view3" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Single View 4</h2>
+      <div id="single_view4" class="viz"></div>
+    </section>
 
-  <section class="chart-block">
-    <h2 class="chart-title">Single View 2</h2>
-    <div id="single_view2" class="viz"></div>
-  </section>
-
-  <section class="chart-block">
-    <h2 class="chart-title">Single View 3</h2>
-    <div id="single_view3" class="viz"></div>
-  </section>
-
-
-  <section class="chart-block">
-    <h2 class="chart-title">Multiple View 1</h2>
-    <div id="multiple_view" class="viz"></div>
-  </section>
-
-  <section class="chart-block">
-    <h2 class="chart-title">Multiple View 2</h2>
-    <div id="multiple_view2" class="viz"></div>
-  </section>
-
-  <section class="chart-block">
-    <h2 class="chart-title">Multiple View 3</h2>
-    <div id="multiple_view5" class="viz"></div>
-  </section>
-
-  <section class="chart-block">
-    <h2 class="chart-title">Multiple View 4</h2>
-    <div id="multiple_view3" class="viz"></div>
-  </section>
-
-  <section class="chart-block4">
-    <h2 class="chart-title">Multiple View 5</h2>
-    <div id="multiple_view4" class="viz"></div>
-  </section>
+    <!-- Multiple Views -->
+    <section class="chart-block">
+      <h2 class="chart-title">Multiple View 1</h2>
+      <div id="multiple_view1" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Multiple View 2</h2>
+      <div id="multiple_view2" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Multiple View 3</h2>
+      <div id="multiple_view3" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Multiple View 4</h2>
+      <div id="multiple_view4" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Multiple View 5</h2>
+      <div id="multiple_view5" class="viz"></div>
+    </section>
+    <section class="chart-block">
+      <h2 class="chart-title">Multiple View 6</h2>
+      <div id="multiple_view6" class="viz"></div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
